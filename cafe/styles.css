@@ -1,0 +1,89 @@
+/* styles for the starbuzz coffee webpage */
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+/* general styles for all pages */
+body {
+  background-color: #d2b48c;
+  font-family: sans-serif;
+
+}
+
+h1 {
+  color: #F57E12;
+  font-size: 30pt;
+  /* padding-bottom: */
+}
+
+p {
+  padding: 2px 0px 20px 0px;
+}
+
+/* styles for links */
+a {
+	color: #FFFFF;
+  padding: 0 5px 0 5px;
+}
+a:link {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+a:hover {
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+a:visited {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+/* styles for lists */
+ul {
+  list-style-type: none;
+}
+
+/* classes */
+.quote {
+  font-weight: bold;
+  font-size: 16pt;
+  color: red;
+
+}
+/* top-level page structure */
+.nav_bar {
+  background-color: #000000;
+	padding: 5px 0 5px 5px;
+
+
+}
+
+.main_content {
+	margin-left: 40px;
+	margin-right: 10px;
+
+}
+
+/* drink_info layout */
+.drinks_container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.drink_info {
+	border: 1px dotted rgb(12, 34, 56);
+  border-radius: 20px;
+  padding: 20px;
+  overflow: hidden;
+  text-align: center;
+  background-color: rgb(217, 214, 208);
+
+}
+
+/* Dealing with images in cards */
+.drink_info > img {
+  max-width: 100%;
+  height: auto;
+}
