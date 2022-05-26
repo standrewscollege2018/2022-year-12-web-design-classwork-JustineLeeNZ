@@ -53,11 +53,21 @@ ul {
 
 }
 /* top-level page structure */
-.nav_bar {
+.nav_bar_container {
+	display: grid;
+	/* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+	grid-template-columns: 2fr 1fr;
+
+}
+.left_nav_bar {
   background-color: #000000;
 	padding: 5px 0 5px 5px;
+}
 
-
+.right_nav_bar {
+  background-color: #000000;
+	padding: 5px 0 5px 5px;
+	text-align: right;
 }
 
 .main_content {
@@ -69,7 +79,10 @@ ul {
 /* drink_info layout */
 .drinks_container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  /* grid-template-columns: repeat(3, 1fr); */
+  grid-template-columns: repeat(auto-fit, minmax(350px,1fr));
+	grid-column-gap: 5px;
+	grid-row-gap: 5px;
 }
 
 .drink_info {
@@ -86,4 +99,37 @@ ul {
 .drink_info > img {
   max-width: 100%;
   height: auto;
+}
+
+
+@media screen and (max-width: 600px) {
+
+	.nav_bar_container {
+		grid-template-columns: 1fr;
+
+	}
+
+	.right_nav_bar {
+		text-align: left;
+		background-color: #a39f9d;
+	}
+
+	body {
+		font-size: 10pt;
+
+	}
+
+	h1 {
+	  font-size: 18pt;
+	}
+
+	h2 {
+		font-size: 14pt;
+
+	}
+
+	.drink_info > img {
+	  display: none;
+	}
+
 }
